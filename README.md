@@ -84,3 +84,8 @@ function DelayedQuery() {
   );
 }
 ```
+
+**References:**
+
+- [Manual execution with useLazyQuery](https://www.apollographql.com/docs/react/data/queries/#manual-execution-with-uselazyquery)
+- [Apollo Client — How to Query on Click](https://www.apollographql.com/blog/apollo-client/how-to-query-on-click/)
