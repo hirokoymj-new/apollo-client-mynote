@@ -20,7 +20,7 @@ import { useQuery } from "@apollo/react-hooks";
 - query: `DocumentNode`
 - variables: { [key: string]: any }
 
-**Caching options**
+## cache-first
 
 By default, the useQuery hook checks the Apollo Client **cache** to see if all the data you requested is already available **locally**. If all data is available locally, useQuery returns that data and doesn't query your GraphQL server. This **cache-first** policy is Apollo Client's default fetch policy.
 
