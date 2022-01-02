@@ -50,3 +50,37 @@ const { loading, error, data } = useQuery(GET_DOGS, {
 - [useQuery](https://www.apollographql.com/docs/react/data/queries/)
 - [useQuery options](https://www.apollographql.com/docs/react/api/react/hooks/#options)
 - [useQuery - fetch policies](https://www.apollographql.com/docs/react/data/queries/#setting-a-fetch-policy)
+
+<hr />
+
+# useQuery vs useLazyQuery
+
+- `useQuery` executes **automatically** when React component calls, but we can manually call query using `useLazyQuery`.
+
+```js
+<Field
+  name="category"
+  component={FormSelect}
+  label="Category"
+  options={category_options}
+  onChange={(event: any, newVal: string) => {
+    getSubCategoryByCategory({
+      variables: { categoryId: newVal },
+    });
+  }}
+/>
+```
+
+```js
+function DelayedQuery() {
+  const [getDog, { loading, error, data }] = useLazyQuery(GET_DOG_PHOTO);
+
+  return (
+    <div>
+      <button onClick={() => getDog({ variables: { breed: "bulldog" } })}>
+        Click me!
+      </button>
+    </div>
+  );
+}
+```
