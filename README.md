@@ -123,5 +123,4 @@ if (!loading && !error) {
 
 - [useMutation](https://www.apollographql.com/docs/react/data/mutations/)
 - [useMutation with TypeScript](https://www.apollographql.com/docs/react/development-testing/static-typing/#usemutation)
-
--[RefetchQueries after mutation not updating UI, yet network tab shows new data](https://github.com/apollographql/apollo-client/issues/3633)
+- [RefetchQueries after mutation not updating UI, yet network tab shows new data](https://github.com/apollographql/apollo-client/issues/3633)
