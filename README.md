@@ -89,3 +89,32 @@ function DelayedQuery() {
 
 - [Manual execution with useLazyQuery](https://www.apollographql.com/docs/react/data/queries/#manual-execution-with-uselazyquery)
 - [Apollo Client — How to Query on Click](https://www.apollographql.com/blog/apollo-client/how-to-query-on-click/)
+
+<hr />
+
+# useMutation
+
+**Syntax**
+
+```js
+const [login, { data, loading, error }] = useMutation(LOGIN_MUTATION);
+```
+
+```js
+const [deleteCategory, { data, error, loading }] =
+  useMutation<ICategory, IDeleteCategoryVars>(DELETE_CATEGORY, {
+    variables: { id: "61d8f06fd76f6d0018ebafa0" },
+  });
+
+if (!loading && !error) {
+  console.log("Print deleted data: ");
+  console.log(data);
+}
+//JSX
+<button
+  onClick={() => {
+    deleteCategory();
+  }}>
+  Delete Mutatioin
+</button>
+```
